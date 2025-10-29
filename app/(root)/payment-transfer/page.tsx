@@ -12,7 +12,7 @@ const PaymentTransfer = async () => {
   const accounts = await getAccounts({ userId: isLoggedIn.$id });
 
 
-  if(!accounts) return;
+  if(!accounts) return null;
 
   const accountsData = accounts?.data;
 

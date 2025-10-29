@@ -41,7 +41,7 @@ export const BankDropdown = ({
 
   return (
     <Select
-      defaultValue={selected.id}
+      defaultValue={selected?.appwriteItemId}
       onValueChange={(value) => handleBankChange(value)}
     >
       <SelectTrigger
@@ -65,7 +65,7 @@ export const BankDropdown = ({
           </SelectLabel>
           {accounts.map((account: Account) => (
             <SelectItem
-              key={account.id}
+              key={account.appwriteItemId}
               value={account.appwriteItemId}
               className="cursor-pointer border-t"
             >
