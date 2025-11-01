@@ -1,0 +1,127 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Enhanced Main Gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001F3F"/>
+      <stop offset="40%" style="stop-color:#003366"/>
+      <stop offset="70%" style="stop-color:#0052CC"/>
+      <stop offset="100%" style="stop-color:#4FB6FF"/>
+    </linearGradient>
+    
+    <!-- Enhanced Accent Gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4FB6FF"/>
+      <stop offset="50%" style="stop-color:#00A6FF"/>
+      <stop offset="100%" style="stop-color:#0088CC"/>
+    </linearGradient>
+
+    <!-- Hexagon Pattern -->
+    <pattern id="hexPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L40,10 L40,30 L20,40 L0,30 L0,10 Z" 
+            fill="none" 
+            stroke="#0052CC" 
+            stroke-width="0.5" 
+            opacity="0.1"/>
+    </pattern>
+
+    <!-- Enhanced Glow -->
+    <filter id="enhancedGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#4FB6FF" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect x="0" y="0" width="800" height="400" fill="url(#hexPattern)"/>
+
+  <!-- Multiple Rotating Rings -->
+  <g transform="translate(200,200)">
+    <circle r="160" fill="none" stroke="url(#mainGradient)" stroke-width="0.5" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="140" fill="none" stroke="url(#accentGradient)" stroke-width="0.5" opacity="0.2">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="20s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Enhanced Background Circle -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#mainGradient)" stroke-width="3">
+    <animate attributeName="r" values="150;155;150" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Advanced Circuit Patterns -->
+  <g stroke="url(#accentGradient)" stroke-width="1" opacity="0.2">
+    <path d="M100,200 Q200,100 300,200" fill="none"/>
+    <path d="M100,200 Q200,300 300,200" fill="none"/>
+    <path d="M150,150 Q200,200 250,150" fill="none"/>
+    <path d="M150,250 Q200,200 250,250" fill="none"/>
+  </g>
+
+  <!-- Enhanced Stylized 'N' -->
+  <g transform="translate(200,200)">
+    <path d="M-50,-60 L-50,60 M-50,-60 L50,60 M50,-60 L50,60" 
+          stroke="url(#mainGradient)" 
+          stroke-width="22" 
+          stroke-linecap="round" 
+          fill="none" 
+          filter="url(#enhancedGlow)"/>
+    <!-- Additional decorative elements -->
+    <circle r="70" fill="none" stroke="url(#accentGradient)" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Enhanced Floating Particles -->
+  <g>
+    <circle cx="120" cy="120" r="4" fill="#4FB6FF">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="120" r="4" fill="#4FB6FF">
+      <animate attributeName="r" values="6;4;6" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="280" r="4" fill="#4FB6FF">
+      <animate attributeName="r" values="6;4;6" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="280" r="4" fill="#4FB6FF">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Enhanced Connection Lines -->
+  <g stroke="#00A6FF" stroke-width="1.5" opacity="0.4">
+    <path d="M120,120 C200,160 200,160 280,120" fill="none"/>
+    <path d="M280,120 C240,200 240,200 280,280" fill="none"/>
+    <path d="M280,280 C200,240 200,240 120,280" fill="none"/>
+    <path d="M120,280 C160,200 160,200 120,120" fill="none"/>
+  </g>
+
+  <!-- Enhanced NexBank Text -->
+  <g transform="translate(400,200)">
+    <text x="0" y="10" 
+          font-family="Arial" 
+          font-size="65" 
+          font-weight="bold" 
+          fill="url(#mainGradient)" 
+          text-anchor="start" 
+          filter="url(#enhancedGlow)"
+          letter-spacing="2">NEXBANK</text>
+  </g>
+
+  <!-- Enhanced Security Ring -->
+  <g transform="translate(200,200)">
+    <circle r="170" fill="none" stroke="url(#accentGradient)" stroke-width="1.5" stroke-dasharray="10,5" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="175" fill="none" stroke="url(#mainGradient)" stroke-width="0.5" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="25s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
